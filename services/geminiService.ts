@@ -1,6 +1,15 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Product } from '../types';
 
+// Declare process to satisfy TypeScript since we don't have @types/node installed
+// Vite will replace process.env.API_KEY with the actual string during build
+declare const process: {
+  env: {
+    API_KEY: string;
+    [key: string]: string | undefined;
+  }
+};
+
 // The API key must be obtained exclusively from the environment variable process.env.API_KEY.
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
