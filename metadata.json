@@ -1,0 +1,7 @@
+{
+  "name": "Smart Price Checker",
+  "description": "Mobile-first inventory management and AI price scanning app using Gemini.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
